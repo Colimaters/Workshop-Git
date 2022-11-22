@@ -24,17 +24,85 @@ Ce workshop a pour but de vous donner les bases de Git et de mettre en place des
 
 ## **Branches : introduction**
 
-blabla
+Lors d'un projet en groupe, il est normal de travailler sur des parties différentes du programme à développer.
+
+Pour s'organiser, il est plus qu'utile de bien séparer le travail dans des branches pour éviter de perdre du temps lors de conflit.
+
+Nous allons donc simuler  un travail de groupe sur un projet simple de script.
+
+> Créer un repository privé sur Github pour la suite des exercices
 
 ## **Branches : develop**
 
+A chaque commencement de projet, nous allons devoir séparer la branch *main* de la branche pour développer.
+
+La branche *main* ne devras jamais recevoir des push direct. Tout devras se faire via une pull request (pour vérifier le code).
+
+Ainsi créer une branche du nom de *develop* qui vas concentrer tout le développement.
+
+Dans cette branche, créer un fichier du nom de *script.sh* et push ce fichier sur git.
+
 ## **Branches : 1ère feature**
+- **Fichier** : script.sh
+- 
+Maintenant que la base est faites, nous allons rajouter 2 fonctionnalités dans ce script.
+
+Pour faire ça, il va falloir créer une branche du nom de "*feature/bonjour*".
+
+Dans cette branche, nous allons modifier le fichier *script.sh*. Rajoutez dans le fichier la ligne suivante:
+
+```sh
+echo "Bonjour !"
+```
+
+Ensuite, il faut push les modifications apportez au fichier
 
 ## **Branches : 2ème feature**
+- **Fichier** : script.sh
+- 
+Ensuite nous allons rajouter la 2nde fonctionnalité de ce script.
+
+Pour faire ça, il va falloir créer une branche du nom de "*feature/politesse*".
+
+Dans cette branche, nous allons modifier le fichier *script.sh*. rajouter dans le fichier la ligne suivante:
+
+```sh
+echo "J'espère que vous passez une bonne journée !"
+```
+
+Ensuite, il faut push les modifications apportez au fichier
 
 ## **Branches : merge et conflit**
 
+Nos 2 fonctionnalités sont prêtes et fonctionnelles. Il est temps de les mettre dans la branche *develop*
+
+Allez sur github et faites une pull request pour tirer les fonctionnalités de la branche "*feature/bonjour*" dans *develop*
+
+Faites ensuite la même chose pour la branche "*feature/politesse*" dans *develop*
+
+> Y a-t-il des erreurs ? Résolvez-les
+
 ## **Branches : code review**
+
+A ce stade notre fichier *script.sh* contient les 2 fonctionnalités. C'est le moment de faire une pull request pour mettre notre programme dans *main*.
+
+Le programme est fonctionnel donc il est possible de le mettre en production !
+
+Faites une dernière pull request pour passer de *develop* à *main*
+
+Cette fois-ci avant d'accepter la pull request, regardez les modifications apportés et mettez un commentaire.
+
+En plus de ce commentaire, rajouter aussi un message global sur la pull request pour signifier que vous l'avez bien lu et que tout est fonctionnelle.
+
+```
+
+
+
+
+```
+
+2ème partie
+===================================
 
 ## **Commit message : introduction**
 
