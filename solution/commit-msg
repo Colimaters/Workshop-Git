@@ -1,0 +1,29 @@
+#!/bin/sh
+
+commit_type="add|remove|fix|build|docs|feat|refactor|style|test"
+base_regex="(\w*$commit_type\w*): .+"
+
+line=$(head -n 1 ${1})
+count=${#line}
+description=$(head -n 1 ${1} | cut -d ":" -f 2)
+
+ret=$(grep -E "$base_regex" ${1})
+test -n "$ret" || {
+    echo >&2 "ERROR: Commit message don't follow the following format -> <type>: <message>"
+	echo >&2 "-> <type> needs to be one of the following -> add, remove, fix, build, docs, feat, refactor, style, test"
+    exit 1
+}
+
+if [ $count -gt 50 ]; then
+	echo >&2 "ERROR: The first line should not be more than 50 characters long"
+	exit 1
+fi
+
+if [ -z "$description" ]; then
+	echo >&2 "ERROR: a description is mandatory"
+	exit 1
+fi
+
+echo "Your commit message is good !"
+exit 0
+
