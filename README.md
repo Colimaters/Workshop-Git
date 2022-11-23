@@ -44,7 +44,7 @@ Dans cette branche, créer un fichier du nom de *script.sh* et push ce fichier s
 
 ## **Branches : 1ère feature**
 - **Fichier** : script.sh
-- 
+
 Maintenant que la base est faites, nous allons rajouter 2 fonctionnalités dans ce script.
 
 Pour faire ça, il va falloir créer une branche du nom de "*feature/bonjour*".
@@ -59,7 +59,7 @@ Ensuite, il faut push les modifications apportez au fichier
 
 ## **Branches : 2ème feature**
 - **Fichier** : script.sh
-- 
+
 Ensuite nous allons rajouter la 2nde fonctionnalité de ce script.
 
 Pour faire ça, il va falloir créer une branche du nom de "*feature/politesse*".
@@ -80,7 +80,17 @@ Allez sur github et faites une pull request pour tirer les fonctionnalités de l
 
 Faites ensuite la même chose pour la branche "*feature/politesse*" dans *develop*
 
-> Y a-t-il des erreurs ? Résolvez-les
+Pour cette 2ème pull request, il devrait y avoir des conflits sous cette forme:
+
+```sh
+<<<<<<< feature/politesse
+echo "J'espère que vous passez une bonne journée !"
+=======
+echo "Bonjour !"
+>>>>>>> develop
+```
+
+> Résolvez le conflit en faisant que la fonctionnalité de la branche "*feature/bonjour*" se trouve au dessus de la fonctionnalité "*feature/politesse*"
 
 ## **Branches : code review**
 
